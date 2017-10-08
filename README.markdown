@@ -1,14 +1,22 @@
 ### Introduction 
 
-Inspect is a Safari extension which allow you to view and export HTTPS sites' certificate information. 
+Inspect is an action extension that allows you view and export HTTPS sites' certificate information.
 
 ### Features
 
 * View SSL certificates chain
-* View X509 certificate information
-* Export selected certificate
-* Show WOT rating for inspected host
+* View X509 certificate information (EV highlighted)
+* Export certificates
+* WOT rating integration
 * Shortcut to scan in SSLLabs.com
+* Recently lookup histories
+* Possible MITM detections
+
+### Credits
+
+* OpenSSL / ZipZap
+* Reusable / SnapKit / FontAwesomeKit
+* Kingfisher
 
 ### Issues
 
