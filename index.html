@@ -6,7 +6,7 @@
     <title>Inspect Support</title>
     <meta
       name="description"
-      content="Support, product details, and privacy information for Inspect, the TLS certificate inspector for iPhone and iPad."
+      content="Support, product details, and privacy information for Inspect, the TLS certificate inspector for iPhone, iPad, and Mac."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,11 @@
       <header class="page-header">
         <div class="header-row">
           <a class="brand" href="index.html">Inspect</a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
           <nav class="nav-links" aria-label="Primary">
             <a class="nav-link current" href="index.html">Support</a>
             <a class="nav-link" href="about.html">About</a>
@@ -30,11 +35,10 @@
           </nav>
         </div>
         <div class="hero">
-          <p class="eyebrow">iPhone and iPad</p>
+          <p class="eyebrow">iPhone, iPad, and Mac</p>
           <h1 class="project-name">Inspect</h1>
           <p class="project-tagline">
-            Inspect captures a live TLS handshake, shows the certificate chain, and helps you understand
-            trust failures, weak crypto, hostname mismatch, and interception signals.
+            TLS certificate inspector with passive Live Monitor. See what your device connects to.
           </p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="mailto:hi@hewig.dev">Email Support</a>
@@ -44,26 +48,52 @@
       </header>
 
       <main class="main-content">
-        <section class="section-grid">
-          <article class="card">
-            <h2>What Inspect Does</h2>
+        <!-- Screenshot showcase -->
+        <section class="screenshot-row">
+          <figure class="screenshot-item">
+            <img src="images/01-inspect-tab.png" alt="Inspect tab showing host input and recent lookups" loading="lazy">
+            <figcaption>Inspect any HTTPS endpoint</figcaption>
+          </figure>
+          <figure class="screenshot-item">
+            <img src="images/02-live-monitor.png" alt="Live Monitor showing observed hosts and certificates" loading="lazy">
+            <figcaption>Live Monitor captures certificates passively</figcaption>
+          </figure>
+          <figure class="screenshot-item">
+            <img src="images/03-host-detail.png" alt="Host detail view showing trust status and certificate info" loading="lazy">
+            <figcaption>Trust status and certificate details</figcaption>
+          </figure>
+          <figure class="screenshot-item">
+            <img src="images/04-cert-chain.png" alt="Certificate chain view showing full X.509 details" loading="lazy">
+            <figcaption>Full certificate chain and X.509 fields</figcaption>
+          </figure>
+        </section>
+
+        <!-- Feature highlight with mac screenshot -->
+        <section class="card feature-band">
+          <div>
+            <p class="eyebrow">New</p>
+            <h2>Live Monitor</h2>
             <p>
-              Inspect is a modern certificate inspector for iOS. You can paste a host name or HTTPS URL, open it
-              from the share sheet, review the server's trust chain, and export DER certificates when needed.
+              Passively observe TLS certificates across your device's traffic. Nothing is intercepted or modified &mdash; certificates are captured from live handshakes and shown in a scrollable feed.
             </p>
             <ul>
-              <li>Inspect live HTTPS endpoints directly from iPhone or iPad.</li>
-              <li>Review X.509 fields, SANs, EKUs, AIA, SKI/AKI, policies, fingerprints, and public key details.</li>
-              <li>See trust evaluation status and security findings in plain language.</li>
-              <li>Export certificates for debugging or incident response.</li>
+              <li>Extracts certificate chains and SNI from live TLS handshakes</li>
+              <li>Detects certificate changes across repeat observations</li>
+              <li>All data stays on-device</li>
+              <li>Works on iOS and macOS</li>
             </ul>
-          </article>
+          </div>
+          <div class="feature-screenshot">
+            <img src="images/mac-inspect.png" alt="Inspect for Mac showing certificate workspace" loading="lazy">
+          </div>
+        </section>
 
+        <!-- Compact info cards -->
+        <section class="section-grid">
           <article class="card">
             <h2>Support</h2>
-            <p>For support, bug reports, or App Store review follow-up, contact:</p>
+            <p>Bug reports, questions, or App Store review follow-up:</p>
             <p><a href="mailto:hi@hewig.dev">hi@hewig.dev</a></p>
-            <p>Project links:</p>
             <ul>
               <li><a href="https://github.com/hewigovens/Inspect">Source code</a></li>
               <li><a href="https://github.com/hewigovens/Inspect/issues">Issue tracker</a></li>
@@ -71,48 +101,25 @@
           </article>
 
           <article class="card">
-            <h2>Privacy Summary</h2>
-            <p>
-              Inspect does not require an account and does not include analytics, advertising SDKs, or third-party
-              tracking.
-            </p>
-            <ul>
-              <li>Recent lookups are stored locally on your device.</li>
-              <li>TLS inspection requests go only to the host you choose to inspect.</li>
-              <li>Favicons for recent items may be fetched from Google's favicon service.</li>
-            </ul>
-            <p><a href="privacy.html">Read the full Privacy Policy</a></p>
+            <h2>Privacy</h2>
+            <p>No accounts. No analytics. No tracking. All data stays on your device.</p>
+            <p>Live Monitor only observes &mdash; never intercepts or modifies traffic.</p>
+            <p><a href="privacy.html">Full Privacy Policy</a></p>
           </article>
-        </section>
 
-        <section class="card feature-band">
-          <div>
-            <p class="eyebrow">Current App</p>
-            <h2>Built for the rewritten SwiftUI version of Inspect</h2>
+          <article class="card">
+            <h2>Technology</h2>
             <p>
-              This support site reflects the current app, not the older Safari extension release. If you saw older
-              screenshots or documentation elsewhere, they likely predate the rewrite.
+              Swift 6, SwiftUI, and Apple's certificate libraries. Live Monitor uses a Rust-based
+              forwarding core with platform-native packet tunnel extensions.
             </p>
-          </div>
-          <div class="feature-list">
-            <div class="mini-card">
-              <strong>Local-first</strong>
-              <span>Uses Apple's trust APIs and an ephemeral <code>URLSession</code> for inspection.</span>
-            </div>
-            <div class="mini-card">
-              <strong>Share sheet support</strong>
-              <span>Open a page from Safari and inspect its HTTPS endpoint without retyping the URL.</span>
-            </div>
-            <div class="mini-card">
-              <strong>Readable findings</strong>
-              <span>Flags trust failures, weak keys, unusual CA usage, and common interception products.</span>
-            </div>
-          </div>
+            <p><a href="about.html">Learn more</a></p>
+          </article>
         </section>
 
         <footer class="site-footer">
           <span class="site-footer-owner">Inspect support site</span>
-          <span class="site-footer-credits">Maintained for the current iOS release.</span>
+          <span class="site-footer-credits">Maintained for the current iOS and macOS release.</span>
         </footer>
       </main>
     </div>

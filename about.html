@@ -6,7 +6,7 @@
     <title>About Inspect</title>
     <meta
       name="description"
-      content="About Inspect, the TLS certificate inspector for iPhone and iPad."
+      content="About Inspect, the TLS certificate inspector for iPhone, iPad, and Mac."
     >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,11 @@
       <header class="page-header compact">
         <div class="header-row">
           <a class="brand" href="index.html">Inspect</a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
           <nav class="nav-links" aria-label="Primary">
             <a class="nav-link" href="index.html">Support</a>
             <a class="nav-link current" href="about.html">About</a>
@@ -31,54 +36,47 @@
         </div>
         <div class="hero compact-hero">
           <p class="eyebrow">About</p>
-          <h1 class="project-name">Inspect for iOS</h1>
+          <h1 class="project-name">Inspect for iOS and Mac</h1>
           <p class="project-tagline">
-            A certificate inspection tool focused on real TLS handshakes, readable X.509 details, and practical trust analysis.
+            Real TLS handshakes, readable X.509 details, and passive Live Monitor.
           </p>
         </div>
       </header>
 
       <main class="main-content">
-        <section class="section-grid">
-          <article class="card">
-            <h2>Core Workflow</h2>
-            <p>
-              Inspect connects to the HTTPS endpoint you specify, captures the presented certificate chain, evaluates
-              server trust with Apple's platform trust engine, and renders the results in a format that is easier to
-              review on a mobile device.
-            </p>
-            <ul>
-              <li>Enter a host name or HTTPS URL directly in the app.</li>
-              <li>Launch Inspect from the iOS share sheet for a page in Safari.</li>
-              <li>Review certificate details, fingerprints, policies, and key usage.</li>
-              <li>Export individual certificates from the chain as DER files.</li>
-            </ul>
-          </article>
+        <!-- Screenshot pair -->
+        <section class="screenshot-row screenshot-row-2">
+          <figure class="screenshot-item">
+            <img src="images/01-inspect-tab.png" alt="Inspect tab with host input" loading="lazy">
+            <figcaption>Enter a host or use the share sheet</figcaption>
+          </figure>
+          <figure class="screenshot-item">
+            <img src="images/04-cert-chain.png" alt="Certificate chain detail view" loading="lazy">
+            <figcaption>Explore the full certificate chain</figcaption>
+          </figure>
+        </section>
 
+        <section class="section-grid section-grid-2">
           <article class="card">
             <h2>Security Analysis</h2>
-            <p>Inspect highlights common problems that matter during debugging and security review:</p>
             <ul>
               <li>Trust failures and hostname mismatch</li>
               <li>Expired or not-yet-valid certificates</li>
-              <li>Weak key sizes and weak signature algorithms</li>
-              <li>Suspicious CA usage or certificate-signing permissions on leaf certificates</li>
-              <li>Common interception and proxy products surfaced from certificate metadata</li>
+              <li>Weak key sizes and signature algorithms</li>
+              <li>Suspicious CA usage on leaf certificates</li>
+              <li>Interception products surfaced from metadata</li>
+              <li>Certificate changes detected by Live Monitor</li>
             </ul>
           </article>
 
           <article class="card">
-            <h2>Current Technology</h2>
-            <p>
-              The current version is a full rewrite built with SwiftUI, Swift Package Manager, and current Apple
-              platform APIs. It replaces the older extension-era implementation and legacy OpenSSL-style stack.
-            </p>
+            <h2>Technology</h2>
             <ul>
-              <li>Swift 6</li>
-              <li>SwiftUI</li>
-              <li>Security framework</li>
-              <li><code>URLSession</code>-based TLS capture</li>
-              <li>Apple `swift-certificates`, `swift-asn1`, and `swift-crypto`</li>
+              <li>Swift 6 and SwiftUI</li>
+              <li>Security framework and <code>URLSession</code> TLS capture</li>
+              <li>Rust forwarding core for Live Monitor</li>
+              <li>Apple <code>swift-certificates</code>, <code>swift-asn1</code>, <code>swift-crypto</code></li>
+              <li>Platform-native packet tunnel extensions</li>
             </ul>
           </article>
         </section>
@@ -93,7 +91,7 @@
 
         <footer class="site-footer">
           <span class="site-footer-owner">Inspect support site</span>
-          <span class="site-footer-credits">Current product information for the iOS app.</span>
+          <span class="site-footer-credits">Current product information for the iOS and macOS app.</span>
         </footer>
       </main>
     </div>

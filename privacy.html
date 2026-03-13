@@ -22,6 +22,11 @@
       <header class="page-header compact">
         <div class="header-row">
           <a class="brand" href="index.html">Inspect</a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
           <nav class="nav-links" aria-label="Primary">
             <a class="nav-link" href="index.html">Support</a>
             <a class="nav-link" href="about.html">About</a>
@@ -33,7 +38,7 @@
           <p class="eyebrow">Legal</p>
           <h1 class="project-name">Privacy Policy</h1>
           <p class="project-tagline">
-            Last updated March 4, 2026.
+            Last updated March 13, 2026.
           </p>
         </div>
       </header>
@@ -41,24 +46,26 @@
       <main class="main-content">
         <section class="card legal-card">
           <p>
-            Inspect is a certificate inspection app for iPhone and iPad. This policy explains what information the app
+            Inspect is a certificate inspection app for iPhone, iPad, and Mac. This policy explains what information the app
             handles and how that information is used.
           </p>
 
           <h2>Information Inspect Processes</h2>
           <p>When you use Inspect, the app may process:</p>
           <ul>
-            <li>Host names or HTTPS URLs that you enter manually or send from the iOS share sheet.</li>
+            <li>Host names or HTTPS URLs that you enter manually or send from the share sheet.</li>
             <li>Certificate chain data returned by the server you choose to inspect.</li>
-            <li>Recent lookup entries stored locally on your device so you can reopen them later.</li>
+            <li>TLS handshake metadata (SNI, certificate chains) passively observed by Live Monitor when enabled.</li>
+            <li>Recent lookup entries and Live Monitor observations stored locally on your device.</li>
             <li>Certificate files you choose to export or share.</li>
           </ul>
 
           <h2>How Inspect Uses This Information</h2>
           <ul>
             <li>To open a TLS connection to the host you selected and capture the presented certificate chain.</li>
+            <li>To passively observe TLS handshakes when Live Monitor is enabled, without intercepting or modifying traffic.</li>
             <li>To evaluate server trust and display certificate details and security findings in the app.</li>
-            <li>To keep a small recent-history list on your device for convenience.</li>
+            <li>To keep a small recent-history list and Live Monitor observations on your device for convenience.</li>
             <li>To generate a temporary certificate file only when you choose to export or share a certificate.</li>
           </ul>
 
@@ -72,6 +79,11 @@
           <p>
             Inspect connects to the HTTPS endpoint that you choose to inspect. Those requests go directly from your
             device to that endpoint so the app can capture the certificate chain and trust result.
+          </p>
+          <p>
+            When Live Monitor is enabled, a local packet tunnel observes TLS handshakes from your device's traffic.
+            The tunnel only reads handshake metadata and does not intercept, decrypt, or modify any traffic. All
+            observations stay on your device.
           </p>
           <p>
             To show favicons next to recent items, the app may request an icon from Google's favicon service using the
@@ -93,7 +105,8 @@
 
           <h2>Your Choices</h2>
           <ul>
-            <li>You can clear recent lookups inside the app.</li>
+            <li>You can clear recent lookups and Live Monitor history inside the app.</li>
+            <li>You can enable or disable Live Monitor at any time.</li>
             <li>You can choose not to export or share certificates.</li>
             <li>You can stop using the app at any time and remove it from your device.</li>
           </ul>
@@ -107,7 +120,7 @@
 
         <footer class="site-footer">
           <span class="site-footer-owner">Inspect support site</span>
-          <span class="site-footer-credits">Privacy policy for the current iOS app.</span>
+          <span class="site-footer-credits">Privacy policy for the current iOS and macOS app.</span>
         </footer>
       </main>
     </div>

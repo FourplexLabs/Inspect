@@ -22,6 +22,11 @@
       <header class="page-header compact">
         <div class="header-row">
           <a class="brand" href="index.html">Inspect</a>
+          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
           <nav class="nav-links" aria-label="Primary">
             <a class="nav-link" href="index.html">Support</a>
             <a class="nav-link" href="about.html">About</a>
@@ -56,6 +61,12 @@
             <h2>swift-crypto</h2>
             <p>Apple's crypto package used in tests and certificate-related tooling.</p>
             <p><a href="https://github.com/apple/swift-crypto">github.com/apple/swift-crypto</a></p>
+          </article>
+
+          <article class="card">
+            <h2>tun2proxy</h2>
+            <p>Rust-based TUN interface proxy used by the Live Monitor packet tunnel for traffic forwarding and passive TLS observation.</p>
+            <p><a href="https://github.com/tun2proxy/tun2proxy">github.com/tun2proxy/tun2proxy</a></p>
           </article>
         </section>
 
