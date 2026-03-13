@@ -1,128 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inspect Privacy Policy</title>
-    <meta
-      name="description"
-      content="Privacy Policy for Inspect."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="page-header compact">
-        <div class="header-row">
-          <a class="brand" href="index.html">Inspect</a>
-          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-          </button>
-          <nav class="nav-links" aria-label="Primary">
-            <a class="nav-link" href="index.html">Support</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link current" href="privacy.html">Privacy</a>
-            <a class="nav-link" href="acknowledgements.html">Acknowledgements</a>
-          </nav>
-        </div>
-        <div class="hero compact-hero">
-          <p class="eyebrow">Legal</p>
-          <h1 class="project-name">Privacy Policy</h1>
-          <p class="project-tagline">
-            Last updated March 13, 2026.
-          </p>
-        </div>
-      </header>
 
-      <main class="main-content">
-        <section class="card legal-card">
-          <p>
-            Inspect is a certificate inspection app for iPhone, iPad, and Mac. This policy explains what information the app
-            handles and how that information is used.
-          </p>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspect Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Inspect.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+</head>
 
-          <h2>Information Inspect Processes</h2>
-          <p>When you use Inspect, the app may process:</p>
-          <ul>
-            <li>Host names or HTTPS URLs that you enter manually or send from the share sheet.</li>
-            <li>Certificate chain data returned by the server you choose to inspect.</li>
-            <li>TLS handshake metadata (SNI, certificate chains) passively observed by Live Monitor when enabled.</li>
-            <li>Recent lookup entries and Live Monitor observations stored locally on your device.</li>
-            <li>Certificate files you choose to export or share.</li>
-          </ul>
+<body>
+  <div class="site-shell">
+    <header class="page-header compact">
+      <div class="header-row">
+        <a class="brand" href="index.html">Inspect</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+          onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link current" href="privacy.html">Privacy</a>
+          <a class="nav-link" href="acknowledgements.html">Acknowledgements</a>
+        </nav>
+      </div>
+      <div class="hero compact-hero">
+        <p class="eyebrow">Legal</p>
+        <h1 class="project-name">Privacy Policy</h1>
+        <p class="project-tagline">
+          Last updated March 13, 2026.
+        </p>
+      </div>
+    </header>
 
-          <h2>How Inspect Uses This Information</h2>
-          <ul>
-            <li>To open a TLS connection to the host you selected and capture the presented certificate chain.</li>
-            <li>To passively observe TLS handshakes when Live Monitor is enabled, without intercepting or modifying traffic.</li>
-            <li>To evaluate server trust and display certificate details and security findings in the app.</li>
-            <li>To keep a small recent-history list and Live Monitor observations on your device for convenience.</li>
-            <li>To generate a temporary certificate file only when you choose to export or share a certificate.</li>
-          </ul>
+    <main class="main-content">
+      <section class="card legal-card">
+        <p>
+          Inspect is a certificate inspection app for iPhone, iPad, and Mac. This policy explains what information the
+          app
+          handles and how that information is used.
+        </p>
 
-          <h2>Data Storage</h2>
-          <p>
-            Inspect stores recent lookups locally on your device using Apple's system storage APIs. Exported
-            certificates are written to a temporary file on-device only when you ask the app to export or share one.
-          </p>
+        <h2>Information Inspect Processes</h2>
+        <p>When you use Inspect, the app may process:</p>
+        <ul>
+          <li>Host names or HTTPS URLs that you enter manually or send from the share sheet.</li>
+          <li>Certificate chain data returned by the server you choose to inspect.</li>
+          <li>TLS handshake metadata (SNI, certificate chains) passively observed by Live Monitor when enabled.</li>
+          <li>Recent lookup entries and Live Monitor observations stored locally on your device.</li>
+          <li>Certificate files you choose to export or share.</li>
+        </ul>
 
-          <h2>Network Requests</h2>
-          <p>
-            Inspect connects to the HTTPS endpoint that you choose to inspect. Those requests go directly from your
-            device to that endpoint so the app can capture the certificate chain and trust result.
-          </p>
-          <p>
-            When Live Monitor is enabled, a local packet tunnel observes TLS handshakes from your device's traffic.
-            The tunnel only reads handshake metadata and does not intercept, decrypt, or modify any traffic. All
-            observations stay on your device.
-          </p>
-          <p>
-            To show favicons next to recent items, the app may request an icon from Google's favicon service using the
-            host name of the recent item. If you do not use recent items, that request is not needed.
-          </p>
+        <h2>How Inspect Uses This Information</h2>
+        <ul>
+          <li>To open a TLS connection to the host you selected and capture the presented certificate chain.</li>
+          <li>To passively observe TLS handshakes when Live Monitor is enabled, without intercepting or modifying
+            traffic.</li>
+          <li>To evaluate server trust and display certificate details and security findings in the app.</li>
+          <li>To keep a small recent-history list and Live Monitor observations on your device for convenience.</li>
+          <li>To generate a temporary certificate file only when you choose to export or share a certificate.</li>
+        </ul>
 
-          <h2>Data Collection and Tracking</h2>
-          <p>
-            Inspect does not require user accounts and does not include advertising SDKs, analytics SDKs, or third-party
-            tracking code operated by the developer.
-          </p>
+        <h2>Data Storage</h2>
+        <p>
+          Inspect stores recent lookups locally on your device using Apple's system storage APIs. Exported
+          certificates are written to a temporary file on-device only when you ask the app to export or share one.
+        </p>
 
-          <h2>Data Sharing</h2>
-          <p>
-            The developer does not receive your inspection history, certificate contents, or exported files through a
-            developer-operated backend service. Information is only sent to third parties as part of the network behavior
-            you initiate in the app, such as connecting to a host you entered or loading a favicon for a recent item.
-          </p>
+        <h2>Network Requests</h2>
+        <p>
+          Inspect connects to the HTTPS endpoint that you choose to inspect. Those requests go directly from your
+          device to that endpoint so the app can capture the certificate chain and trust result.
+        </p>
+        <p>
+          When Live Monitor is enabled, a local packet tunnel observes TLS handshakes from your device's traffic.
+          The tunnel only reads handshake metadata and does not intercept, decrypt, or modify any traffic. All
+          observations stay on your device.
+        </p>
+        <p>
+          To show favicons next to recent items, the app may request an icon from Google's favicon service using the
+          host name of the recent item. If you do not use recent items, that request is not needed.
+        </p>
 
-          <h2>Your Choices</h2>
-          <ul>
-            <li>You can clear recent lookups and Live Monitor history inside the app.</li>
-            <li>You can enable or disable Live Monitor at any time.</li>
-            <li>You can choose not to export or share certificates.</li>
-            <li>You can stop using the app at any time and remove it from your device.</li>
-          </ul>
+        <h2>Data Collection and Tracking</h2>
+        <p>
+          Inspect does not require user accounts and does not include advertising SDKs, analytics SDKs, or third-party
+          tracking code operated by the developer.
+        </p>
 
-          <h2>Contact</h2>
-          <p>
-            If you have privacy questions, contact
-            <a href="mailto:hi@hewig.dev">hi@hewig.dev</a>.
-          </p>
-        </section>
+        <h2>Data Sharing</h2>
+        <p>
+          The developer does not receive your inspection history, certificate contents, or exported files through a
+          developer-operated backend service. Information is only sent to third parties as part of the network behavior
+          you initiate in the app, such as connecting to a host you entered or loading a favicon for a recent item.
+        </p>
 
-        <footer class="site-footer">
-          <span class="site-footer-owner">Inspect support site</span>
-          <span class="site-footer-credits">Privacy policy for the current iOS and macOS app.</span>
-        </footer>
-      </main>
-    </div>
-  </body>
+        <h2>Your Choices</h2>
+        <ul>
+          <li>You can clear recent lookups and Live Monitor history inside the app.</li>
+          <li>You can enable or disable Live Monitor at any time.</li>
+          <li>You can choose not to export or share certificates.</li>
+          <li>You can stop using the app at any time and remove it from your device.</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>
+          If you have privacy questions, contact
+          <a href="mailto:hi@hewig.dev">hi@hewig.dev</a>.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">Inspect support site</span>
+        <span class="site-footer-credits">Privacy policy for the current iOS and macOS app.</span>
+      </footer>
+    </main>
+  </div>
+</body>
+
 </html>

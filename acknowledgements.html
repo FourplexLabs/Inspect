@@ -1,88 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inspect Acknowledgements</title>
-    <meta
-      name="description"
-      content="Open source acknowledgements for Inspect."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="page-header compact">
-        <div class="header-row">
-          <a class="brand" href="index.html">Inspect</a>
-          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-          </button>
-          <nav class="nav-links" aria-label="Primary">
-            <a class="nav-link" href="index.html">Support</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="privacy.html">Privacy</a>
-            <a class="nav-link current" href="acknowledgements.html">Acknowledgements</a>
-          </nav>
-        </div>
-        <div class="hero compact-hero">
-          <p class="eyebrow">Open Source</p>
-          <h1 class="project-name">Acknowledgements</h1>
-          <p class="project-tagline">
-            Inspect uses a small set of open source packages in the current rewritten app.
-          </p>
-        </div>
-      </header>
 
-      <main class="main-content">
-        <section class="section-grid">
-          <article class="card">
-            <h2>swift-certificates</h2>
-            <p>Apple's X.509 package used for certificate parsing and related models.</p>
-            <p><a href="https://github.com/apple/swift-certificates">github.com/apple/swift-certificates</a></p>
-          </article>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspect Acknowledgements</title>
+  <meta name="description" content="Open source acknowledgements for Inspect.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+</head>
 
-          <article class="card">
-            <h2>swift-asn1</h2>
-            <p>Apple's ASN.1 package used by the certificate parsing layer.</p>
-            <p><a href="https://github.com/apple/swift-asn1">github.com/apple/swift-asn1</a></p>
-          </article>
+<body>
+  <div class="site-shell">
+    <header class="page-header compact">
+      <div class="header-row">
+        <a class="brand" href="index.html">Inspect</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+          onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="privacy.html">Privacy</a>
+          <a class="nav-link current" href="acknowledgements.html">Acknowledgements</a>
+        </nav>
+      </div>
+      <div class="hero compact-hero">
+        <p class="eyebrow">Open Source</p>
+        <h1 class="project-name">Acknowledgements</h1>
+        <p class="project-tagline">
+          Inspect uses a small set of open source packages in the current rewritten app.
+        </p>
+      </div>
+    </header>
 
-          <article class="card">
-            <h2>swift-crypto</h2>
-            <p>Apple's crypto package used in tests and certificate-related tooling.</p>
-            <p><a href="https://github.com/apple/swift-crypto">github.com/apple/swift-crypto</a></p>
-          </article>
+    <main class="main-content">
+      <section class="section-grid">
+        <article class="card">
+          <h2>swift-certificates</h2>
+          <p>Apple's X.509 package used for certificate parsing and related models.</p>
+          <p><a href="https://github.com/apple/swift-certificates">github.com/apple/swift-certificates</a></p>
+        </article>
 
-          <article class="card">
-            <h2>tun2proxy</h2>
-            <p>Rust-based TUN interface proxy used by the Live Monitor packet tunnel for traffic forwarding and passive TLS observation.</p>
-            <p><a href="https://github.com/tun2proxy/tun2proxy">github.com/tun2proxy/tun2proxy</a></p>
-          </article>
-        </section>
+        <article class="card">
+          <h2>swift-asn1</h2>
+          <p>Apple's ASN.1 package used by the certificate parsing layer.</p>
+          <p><a href="https://github.com/apple/swift-asn1">github.com/apple/swift-asn1</a></p>
+        </article>
 
-        <section class="card legal-card">
-          <h2>License Notice</h2>
-          <p>
-            Each package is distributed under its own license. Refer to the upstream repositories for the complete,
-            current license text and notices shipped with those projects.
-          </p>
-        </section>
+        <article class="card">
+          <h2>swift-crypto</h2>
+          <p>Apple's crypto package used in tests and certificate-related tooling.</p>
+          <p><a href="https://github.com/apple/swift-crypto">github.com/apple/swift-crypto</a></p>
+        </article>
 
-        <footer class="site-footer">
-          <span class="site-footer-owner">Inspect support site</span>
-          <span class="site-footer-credits">Acknowledgements for the current SwiftUI rewrite.</span>
-        </footer>
-      </main>
-    </div>
-  </body>
+        <article class="card">
+          <h2>tun2proxy</h2>
+          <p>Rust-based TUN interface proxy used by the Live Monitor packet tunnel for traffic forwarding and passive
+            TLS observation.</p>
+          <p><a href="https://github.com/tun2proxy/tun2proxy">github.com/tun2proxy/tun2proxy</a></p>
+        </article>
+      </section>
+
+      <section class="card legal-card">
+        <h2>License Notice</h2>
+        <p>
+          Each package is distributed under its own license. Refer to the upstream repositories for the complete,
+          current license text and notices shipped with those projects.
+        </p>
+      </section>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner">Inspect support site</span>
+        <span class="site-footer-credits">Acknowledgements for the current SwiftUI rewrite.</span>
+      </footer>
+    </main>
+  </div>
+</body>
+
 </html>

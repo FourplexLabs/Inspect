@@ -1,127 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Inspect Support</title>
-    <meta
-      name="description"
-      content="Support, product details, and privacy information for Inspect, the TLS certificate inspector for iPhone, iPad, and Mac."
-    >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
-      rel="stylesheet"
-    >
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-  </head>
-  <body>
-    <div class="site-shell">
-      <header class="page-header">
-        <div class="header-row">
-          <a class="brand" href="index.html">Inspect</a>
-          <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-            <span class="nav-toggle-bar"></span>
-          </button>
-          <nav class="nav-links" aria-label="Primary">
-            <a class="nav-link current" href="index.html">Support</a>
-            <a class="nav-link" href="about.html">About</a>
-            <a class="nav-link" href="privacy.html">Privacy</a>
-            <a class="nav-link" href="acknowledgements.html">Acknowledgements</a>
-          </nav>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inspect Support</title>
+  <meta name="description"
+    content="Support, product details, and privacy information for Inspect, the TLS certificate inspector for iPhone, iPad, and Mac.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+</head>
+
+<body>
+  <div class="site-shell">
+    <header class="page-header">
+      <div class="header-row">
+        <a class="brand" href="index.html">Inspect</a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
+          onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false'?'true':'false');this.closest('.header-row').querySelector('.nav-links').classList.toggle('open')">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="nav-link" href="privacy.html">Privacy</a>
+          <a class="nav-link" href="acknowledgements.html">Acknowledgements</a>
+        </nav>
+      </div>
+      <div class="hero">
+        <p class="eyebrow">iPhone, iPad, and Mac</p>
+        <h1 class="project-name">Inspect</h1>
+        <p class="project-tagline">
+          TLS certificate inspector with passive Live Monitor. See what your device connects to.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/inspect-view-tls-certificate/id1074957486">Download on the App Store</a>
         </div>
-        <div class="hero">
-          <p class="eyebrow">iPhone, iPad, and Mac</p>
-          <h1 class="project-name">Inspect</h1>
-          <p class="project-tagline">
-            TLS certificate inspector with passive Live Monitor. See what your device connects to.
+      </div>
+    </header>
+
+    <main class="main-content">
+      <!-- Screenshot showcase -->
+      <section class="screenshot-row">
+        <figure class="screenshot-item">
+          <img src="images/01-inspect-tab.png" alt="Inspect tab showing host input and recent lookups" loading="lazy">
+          <figcaption>Inspect any HTTPS endpoint</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <img src="images/02-live-monitor.png" alt="Live Monitor showing observed hosts and certificates"
+            loading="lazy">
+          <figcaption>Live Monitor captures certificates passively</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <img src="images/03-host-detail.png" alt="Host detail view showing trust status and certificate info"
+            loading="lazy">
+          <figcaption>Trust status and certificate details</figcaption>
+        </figure>
+        <figure class="screenshot-item">
+          <img src="images/04-cert-chain.png" alt="Certificate chain view showing full X.509 details" loading="lazy">
+          <figcaption>Full certificate chain and X.509 fields</figcaption>
+        </figure>
+      </section>
+
+      <!-- Feature highlight with mac screenshot -->
+      <section class="card feature-band">
+        <div>
+          <p class="eyebrow">New</p>
+          <h2>Live Monitor</h2>
+          <p>
+            Passively observe TLS certificates across your device's traffic. Nothing is intercepted or modified &mdash;
+            certificates are captured from live handshakes and shown in a scrollable feed.
           </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:hi@hewig.dev">Email Support</a>
-            <a class="btn" href="privacy.html">Privacy Policy</a>
-          </div>
+          <ul>
+            <li>Extracts certificate chains and SNI from live TLS handshakes</li>
+            <li>Detects certificate changes across repeat observations</li>
+            <li>All data stays on-device</li>
+            <li>Works on iOS and macOS</li>
+          </ul>
         </div>
-      </header>
+        <div class="feature-screenshot">
+          <img src="images/mac-inspect.png" alt="Inspect for Mac showing certificate workspace" loading="lazy">
+        </div>
+      </section>
 
-      <main class="main-content">
-        <!-- Screenshot showcase -->
-        <section class="screenshot-row">
-          <figure class="screenshot-item">
-            <img src="images/01-inspect-tab.png" alt="Inspect tab showing host input and recent lookups" loading="lazy">
-            <figcaption>Inspect any HTTPS endpoint</figcaption>
-          </figure>
-          <figure class="screenshot-item">
-            <img src="images/02-live-monitor.png" alt="Live Monitor showing observed hosts and certificates" loading="lazy">
-            <figcaption>Live Monitor captures certificates passively</figcaption>
-          </figure>
-          <figure class="screenshot-item">
-            <img src="images/03-host-detail.png" alt="Host detail view showing trust status and certificate info" loading="lazy">
-            <figcaption>Trust status and certificate details</figcaption>
-          </figure>
-          <figure class="screenshot-item">
-            <img src="images/04-cert-chain.png" alt="Certificate chain view showing full X.509 details" loading="lazy">
-            <figcaption>Full certificate chain and X.509 fields</figcaption>
-          </figure>
-        </section>
+      <!-- Compact info cards -->
+      <section class="section-grid">
+        <article class="card">
+          <h2>Support</h2>
+          <p>Bug reports, questions, or App Store review follow-up:</p>
+          <p><a href="mailto:hi@hewig.dev">hi@hewig.dev</a></p>
+          <ul>
+            <li><a href="https://github.com/hewigovens/Inspect">Source code</a></li>
+            <li><a href="https://github.com/hewigovens/Inspect/issues">Issue tracker</a></li>
+          </ul>
+        </article>
 
-        <!-- Feature highlight with mac screenshot -->
-        <section class="card feature-band">
-          <div>
-            <p class="eyebrow">New</p>
-            <h2>Live Monitor</h2>
-            <p>
-              Passively observe TLS certificates across your device's traffic. Nothing is intercepted or modified &mdash; certificates are captured from live handshakes and shown in a scrollable feed.
-            </p>
-            <ul>
-              <li>Extracts certificate chains and SNI from live TLS handshakes</li>
-              <li>Detects certificate changes across repeat observations</li>
-              <li>All data stays on-device</li>
-              <li>Works on iOS and macOS</li>
-            </ul>
-          </div>
-          <div class="feature-screenshot">
-            <img src="images/mac-inspect.png" alt="Inspect for Mac showing certificate workspace" loading="lazy">
-          </div>
-        </section>
+        <article class="card">
+          <h2>Security Analysis</h2>
+          <ul>
+            <li>Trust failures and hostname mismatch</li>
+            <li>Expired or not-yet-valid certificates</li>
+            <li>Weak key sizes and signature algorithms</li>
+            <li>Suspicious CA usage on leaf certificates</li>
+            <li>Interception products surfaced from metadata</li>
+            <li>Certificate changes detected by Live Monitor</li>
+          </ul>
+        </article>
 
-        <!-- Compact info cards -->
-        <section class="section-grid">
-          <article class="card">
-            <h2>Support</h2>
-            <p>Bug reports, questions, or App Store review follow-up:</p>
-            <p><a href="mailto:hi@hewig.dev">hi@hewig.dev</a></p>
-            <ul>
-              <li><a href="https://github.com/hewigovens/Inspect">Source code</a></li>
-              <li><a href="https://github.com/hewigovens/Inspect/issues">Issue tracker</a></li>
-            </ul>
-          </article>
+        <article class="card">
+          <h2>Technology</h2>
+          <ul>
+            <li>Swift 6 and SwiftUI</li>
+            <li>Security framework and <code>URLSession</code> TLS capture</li>
+            <li>Rust forwarding core for Live Monitor</li>
+            <li>Apple <code>swift-certificates</code>, <code>swift-asn1</code>, <code>swift-crypto</code></li>
+            <li>Platform-native packet tunnel extensions</li>
+          </ul>
+        </article>
+      </section>
 
-          <article class="card">
-            <h2>Privacy</h2>
-            <p>No accounts. No analytics. No tracking. All data stays on your device.</p>
-            <p>Live Monitor only observes &mdash; never intercepts or modifies traffic.</p>
-            <p><a href="privacy.html">Full Privacy Policy</a></p>
-          </article>
+      <footer class="site-footer">
+        <span class="site-footer-owner">Inspect support site</span>
+        <span class="site-footer-credits">Maintained for the current iOS and macOS release.</span>
+      </footer>
+    </main>
+  </div>
+</body>
 
-          <article class="card">
-            <h2>Technology</h2>
-            <p>
-              Swift 6, SwiftUI, and Apple's certificate libraries. Live Monitor uses a Rust-based
-              forwarding core with platform-native packet tunnel extensions.
-            </p>
-            <p><a href="about.html">Learn more</a></p>
-          </article>
-        </section>
-
-        <footer class="site-footer">
-          <span class="site-footer-owner">Inspect support site</span>
-          <span class="site-footer-credits">Maintained for the current iOS and macOS release.</span>
-        </footer>
-      </main>
-    </div>
-  </body>
 </html>
